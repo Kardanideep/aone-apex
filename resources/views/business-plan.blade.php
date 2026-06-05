@@ -29,7 +29,7 @@
     <section class="py-20 relative border-t border-white/5">
         <div class="max-w-5xl mx-auto px-6 lg:px-12">
             <div class="text-center mb-16">
-                <h2 class="font-serif text-3xl md:text-4xl text-white mb-6">Investment & Joining Plans</h2>
+                <h2 class="font-serif text-3xl md:text-4xl text-white mb-6">Investment And Joining Plans</h2>
                 <p class="text-gray-400 font-light text-lg max-w-3xl mx-auto">
                     Members can join at any of the 10 investment levels. Daily returns of 1% are credited on a 7-days
                     working income basis. The higher the investment, the greater the returns.
@@ -82,8 +82,10 @@
                         <tr>
                             <th>SR. No.</th>
                             <th class="text-brand-pink">Joining Amount ($)</th>
-                            <th>Daily Returns (1%/day)</th>
-                            <th class="text-brand-purple">7-Day Working Income</th>
+                            <th>Daily (1%)</th>
+                            <th class="text-brand-purple">7-Day Return</th>
+                            <th>Monthly Return</th>
+                            <th>Yearly Return</th>
                         </tr>
                     </thead>
 
@@ -91,62 +93,82 @@
                         <tr>
                             <td>1</td>
                             <td class="font-medium text-white">$20</td>
-                            <td>$0.20 / day</td>
+                            <td>$0.20</td>
                             <td class="text-white">$1.40</td>
+                            <td>$6.00</td>
+                            <td>$73.00</td>
                         </tr>
                         <tr>
                             <td>2</td>
                             <td class="font-medium text-white">$50</td>
-                            <td>$0.50 / day</td>
+                            <td>$0.50</td>
                             <td class="text-white">$3.50</td>
+                            <td>$15.00</td>
+                            <td>$182.50</td>
                         </tr>
                         <tr>
                             <td>3</td>
                             <td class="font-medium text-white">$100</td>
-                            <td>$1.00 / day</td>
+                            <td>$1.00</td>
                             <td class="text-white">$7.00</td>
+                            <td>$30.00</td>
+                            <td>$365.00</td>
                         </tr>
                         <tr>
                             <td>4</td>
                             <td class="font-medium text-white">$200</td>
-                            <td>$2.00 / day</td>
+                            <td>$2.00</td>
                             <td class="text-white">$14.00</td>
+                            <td>$60.00</td>
+                            <td>$730.00</td>
                         </tr>
                         <tr>
                             <td>5</td>
                             <td class="font-medium text-white">$500</td>
-                            <td>$5.00 / day</td>
+                            <td>$5.00</td>
                             <td class="text-white">$35.00</td>
+                            <td>$150.00</td>
+                            <td>$1,825.00</td>
                         </tr>
                         <tr>
                             <td>6</td>
                             <td class="font-medium text-white">$1,000</td>
-                            <td>$10.00 / day</td>
+                            <td>$10.00</td>
                             <td class="text-white">$70.00</td>
+                            <td>$300.00</td>
+                            <td>$3,650.00</td>
                         </tr>
                         <tr>
                             <td>7</td>
                             <td class="font-medium text-white">$2,000</td>
-                            <td>$20.00 / day</td>
+                            <td>$20.00</td>
                             <td class="text-white">$140.00</td>
+                            <td>$600.00</td>
+                            <td>$7,300.00</td>
                         </tr>
                         <tr>
                             <td>8</td>
                             <td class="font-medium text-white">$5,000</td>
-                            <td>$50.00 / day</td>
+                            <td>$50.00</td>
                             <td class="text-white">$350.00</td>
+                            <td>$1,500.00</td>
+                            <td>$18,250.00</td>
                         </tr>
                         <tr>
                             <td>9</td>
                             <td class="font-medium text-white">$10,000</td>
-                            <td>$100.00 / day</td>
+                            <td>$100.00</td>
                             <td class="text-white">$700.00</td>
+                            <td>$3,000.00</td>
+                            <td>$36,500.00</td>
                         </tr>
                         <tr>
                             <td>10</td>
                             <td class="font-medium text-white">$20,000</td>
-                            <td>$200.00 / day</td>
+                            <td>$200.00</td>
                             <td class="text-white">$1,400.00</td>
+                            <td>$6,000.00</td>
+                            <td>$73,000.00</td>
                         </tr>
                     </tbody>
                 </table>
