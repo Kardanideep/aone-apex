@@ -169,7 +169,7 @@
             </div>
 
             <!-- Level Table -->
-            <div class="overflow-x-auto rounded-2xl border border-white/5 bg-[#030009] p-4 md:p-8 max-w-3xl mx-auto">
+            <div class="overflow-x-auto rounded-2xl border border-white/5 bg-[#08060F] p-4 md:p-8 max-w-3xl mx-auto">
                 <table class="w-full plan-table border-collapse">
                     <thead>
                         <tr>
@@ -212,124 +212,132 @@
 
     <!-- Salary Income Section -->
     <!-- <section class="py-20 relative border-t border-white/5">
-        <div
-            class="absolute left-0 bottom-0 w-[400px] h-[400px] bg-brand-purple/5 rounded-full blur-[100px] pointer-events-none">
-        </div>
-        <div class="max-w-6xl mx-auto px-6 lg:px-12 relative z-10">
-            <div class="text-center mb-16">
-                <h2 class="font-serif text-3xl md:text-4xl text-white mb-6">Salary Income — Lifetime</h2>
-                <p class="text-gray-400 font-light text-lg max-w-4xl mx-auto">
-                    Achieve fixed salary milestones by growing your self-business and team network. Once unlocked, salary is
-                    paid every month for lifetime — from either Self Business or Direct Business achievements.
-                </p>
+            <div
+                class="absolute left-0 bottom-0 w-[400px] h-[400px] bg-brand-purple/5 rounded-full blur-[100px] pointer-events-none">
             </div>
+            <div class="max-w-6xl mx-auto px-6 lg:px-12 relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="font-serif text-3xl md:text-4xl text-white mb-6">Salary Income — Lifetime</h2>
+                    <p class="text-gray-400 font-light text-lg max-w-4xl mx-auto">
+                        Achieve fixed salary milestones by growing your self-business and team network. Once unlocked, salary is
+                        paid every month for lifetime — from either Self Business or Direct Business achievements.
+                    </p>
+                </div>
 
-            <div class="overflow-x-auto bg-white/[0.02] rounded-2xl border border-white/5 p-4 md:p-8">
-                <table class="w-full plan-table border-collapse">
-                    <thead>
-                        <tr>
-                            <th>Level</th>
-                            <th>Self Business (INR)</th>
-                            <th>Direct Business (INR)</th>
-                            <th>Team Business (INR)</th>
-                            <th class="text-brand-purple">Monthly Salary (INR)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>100</td>
-                            <td>500</td>
-                            <td>2,500</td>
-                            <td class="font-medium text-brand-purple text-lg">100</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>100</td>
-                            <td>1,000</td>
-                            <td>5,000</td>
-                            <td class="font-medium text-brand-purple text-lg">250</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>100</td>
-                            <td>2,500</td>
-                            <td>10,000</td>
-                            <td class="font-medium text-brand-purple text-lg">500</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>250</td>
-                            <td>5,000</td>
-                            <td>25,000</td>
-                            <td class="font-medium text-brand-purple text-lg">1,000</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>250</td>
-                            <td>15,000</td>
-                            <td>50,000</td>
-                            <td class="font-medium text-brand-purple text-lg">2,500</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>500</td>
-                            <td>30,000</td>
-                            <td>70,000</td>
-                            <td class="font-medium text-brand-purple text-lg">5,000</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>500</td>
-                            <td>60,000</td>
-                            <td>2,00,000</td>
-                            <td class="font-medium text-brand-purple text-lg">10,000</td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td>500</td>
-                            <td>1,00,000</td>
-                            <td>4,00,000</td>
-                            <td class="font-medium text-brand-purple text-lg">25,000</td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td>1,000</td>
-                            <td>2,00,000</td>
-                            <td>8,00,000</td>
-                            <td class="font-medium text-brand-purple text-lg">50,000</td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>1,000</td>
-                            <td>5,00,000</td>
-                            <td>1,00,00,000</td>
-                            <td class="font-medium text-brand-purple text-lg">1,00,000</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="overflow-x-auto bg-white/[0.02] rounded-2xl border border-white/5 p-4 md:p-8">
+                    <table class="w-full plan-table border-collapse">
+                        <thead>
+                            <tr>
+                                <th>Level</th>
+                                <th>Self Business (INR)</th>
+                                <th>Direct Business (INR)</th>
+                                <th>Team Business (INR)</th>
+                                <th class="text-brand-purple">Monthly Salary (INR)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>100</td>
+                                <td>500</td>
+                                <td>2,500</td>
+                                <td class="font-medium text-brand-purple text-lg">100</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>100</td>
+                                <td>1,000</td>
+                                <td>5,000</td>
+                                <td class="font-medium text-brand-purple text-lg">250</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>100</td>
+                                <td>2,500</td>
+                                <td>10,000</td>
+                                <td class="font-medium text-brand-purple text-lg">500</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>250</td>
+                                <td>5,000</td>
+                                <td>25,000</td>
+                                <td class="font-medium text-brand-purple text-lg">1,000</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>250</td>
+                                <td>15,000</td>
+                                <td>50,000</td>
+                                <td class="font-medium text-brand-purple text-lg">2,500</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>500</td>
+                                <td>30,000</td>
+                                <td>70,000</td>
+                                <td class="font-medium text-brand-purple text-lg">5,000</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>500</td>
+                                <td>60,000</td>
+                                <td>2,00,000</td>
+                                <td class="font-medium text-brand-purple text-lg">10,000</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>500</td>
+                                <td>1,00,000</td>
+                                <td>4,00,000</td>
+                                <td class="font-medium text-brand-purple text-lg">25,000</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>1,000</td>
+                                <td>2,00,000</td>
+                                <td>8,00,000</td>
+                                <td class="font-medium text-brand-purple text-lg">50,000</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>1,000</td>
+                                <td>5,00,000</td>
+                                <td>1,00,00,000</td>
+                                <td class="font-medium text-brand-purple text-lg">1,00,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
-    </section> -->
+        </section> -->
 
     <!-- Monthly Salary — Generation Plan Condition -->
     <section class="py-16 relative border-t border-white/5">
         <div class="max-w-5xl mx-auto px-6 lg:px-12">
-            <div class="flex items-start gap-5 bg-brand-gold/5 border border-brand-gold/25 rounded-2xl p-8 relative overflow-hidden">
+            <div
+                class="flex items-start gap-5 bg-brand-gold/5 border border-brand-gold/25 rounded-2xl p-8 relative overflow-hidden">
                 <!-- Gold glow -->
-                <div class="absolute top-0 right-0 w-48 h-48 bg-brand-gold/10 rounded-full blur-[80px] pointer-events-none"></div>
+                <div class="absolute top-0 right-0 w-48 h-48 bg-brand-gold/10 rounded-full blur-[80px] pointer-events-none">
+                </div>
                 <!-- Icon -->
-                <div class="w-10 h-10 rounded-full bg-brand-gold/15 border border-brand-gold/40 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div
+                    class="w-10 h-10 rounded-full bg-brand-gold/15 border border-brand-gold/40 flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg class="w-5 h-5 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                 </div>
                 <!-- Content -->
                 <div class="relative z-10">
                     <h3 class="font-serif text-xl text-brand-gold mb-1">Monthly Salary — Generation Plan Condition</h3>
-                    <p class="text-xs uppercase tracking-widest text-brand-gold/60 font-medium mb-4">Monthly Salary Collection Condition</p>
+                    <p class="text-xs uppercase tracking-widest text-brand-gold/60 font-medium mb-4">Monthly Salary
+                        Collection Condition</p>
                     <p class="text-gray-300 font-light leading-relaxed">
-                        To collect monthly salary, <span class="text-white font-medium">one ID is compulsory every month</span>. For collecting salary, the minimum monthly self-business must be <span class="text-white font-medium">100 USDT</span> <span class="text-gray-400">(Self OR Team combined)</span>.
+                        To collect monthly salary, <span class="text-white font-medium">one ID is compulsory every
+                            month</span>. For collecting salary, the minimum monthly self-business must be <span
+                            class="text-white font-medium">100 USDT</span> <span class="text-gray-400">(Self OR Team
+                            combined)</span>.
                     </p>
                 </div>
             </div>
@@ -339,7 +347,9 @@
     <!-- Terms and Conditions Section — Two Panels -->
 
     <section class="py-20 relative border-t border-white/5">
-        <div class="absolute top-0 left-0 w-[400px] h-[400px] bg-brand-purple/5 rounded-full blur-[120px] pointer-events-none"></div>
+        <div
+            class="absolute top-0 left-0 w-[400px] h-[400px] bg-brand-purple/5 rounded-full blur-[120px] pointer-events-none">
+        </div>
         <div class="max-w-5xl mx-auto px-6 lg:px-12 relative z-10">
 
             <!-- Section heading -->
@@ -356,11 +366,15 @@
 
                 <!-- LEFT: General Terms -->
                 <div class="bg-brand-purple/5 border border-brand-purple/20 p-8 rounded-2xl relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-40 h-40 bg-brand-purple/10 rounded-full blur-[60px] pointer-events-none"></div>
+                    <div
+                        class="absolute top-0 right-0 w-40 h-40 bg-brand-purple/10 rounded-full blur-[60px] pointer-events-none">
+                    </div>
                     <div class="flex items-center gap-3 mb-6">
-                        <div class="w-8 h-8 rounded-full bg-brand-purple/20 border border-brand-purple/40 flex items-center justify-center flex-shrink-0">
+                        <div
+                            class="w-8 h-8 rounded-full bg-brand-purple/20 border border-brand-purple/40 flex items-center justify-center flex-shrink-0">
                             <svg class="w-4 h-4 text-brand-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
                         </div>
                         <h3 class="font-serif text-xl text-white">General Terms</h3>
@@ -399,11 +413,15 @@
 
                 <!-- RIGHT: Financial & Operational -->
                 <div class="bg-brand-pink/5 border border-brand-pink/20 p-8 rounded-2xl relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-40 h-40 bg-brand-pink/10 rounded-full blur-[60px] pointer-events-none"></div>
+                    <div
+                        class="absolute top-0 right-0 w-40 h-40 bg-brand-pink/10 rounded-full blur-[60px] pointer-events-none">
+                    </div>
                     <div class="flex items-center gap-3 mb-6">
-                        <div class="w-8 h-8 rounded-full bg-brand-pink/20 border border-brand-pink/40 flex items-center justify-center flex-shrink-0">
+                        <div
+                            class="w-8 h-8 rounded-full bg-brand-pink/20 border border-brand-pink/40 flex items-center justify-center flex-shrink-0">
                             <svg class="w-4 h-4 text-brand-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </div>
                         <h3 class="font-serif text-xl text-white">Financial And Operational</h3>
@@ -436,6 +454,10 @@
                         <li class="flex items-start gap-3">
                             <span class="text-brand-pink mt-0.5 flex-shrink-0">✦</span>
                             <span>Every month one ID required to collect monthly salary — No Amount Limit.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-brand-pink mt-0.5 flex-shrink-0">✦</span>
+                            <span>Funds transferred from the Wallet to the Compounding Fund will earn 0.4% daily compound interest, with the balance expected to approximately double within 5 months.</span>
                         </li>
                     </ul>
                 </div>
