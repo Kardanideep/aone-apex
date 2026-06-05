@@ -19,7 +19,7 @@
                     },
                     colors: {
                         brand: {
-                            dark: '#08060F',
+                            dark: '#030009',
                             purple: '#6B46C1',
                             pink: '#D53F8C',
                             gold: '#D4AF37', /* Added gold for financial aspect */
@@ -30,7 +30,7 @@
         }
     </script>
     <style>
-        body { background-color: #08060F; color: #FAF9F6; overflow-x: hidden; }
+        body { background-color: #030009; color: #FAF9F6; overflow-x: hidden; }
         .text-gradient { background: linear-gradient(to right, #D53F8C, #6B46C1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .text-gradient-gold { background: linear-gradient(to right, #FDE047, #D4AF37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         
@@ -55,7 +55,7 @@
         }
         
         .nav-scrolled {
-            background: rgba(8, 6, 15, 0.9);
+            background: rgba(3, 0, 9, 0.92);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
@@ -118,7 +118,7 @@
 
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu"
-        class="fixed inset-0 z-30 bg-[#08060F]/95 backdrop-blur-xl flex flex-col justify-between px-8 py-8 lg:hidden
+        class="fixed inset-0 z-30 bg-[#030009]/95 backdrop-blur-xl flex flex-col justify-between px-8 py-8 lg:hidden
                translate-x-full transition-transform duration-500 ease-in-out">
 
         <!-- Top: Logo + Close area

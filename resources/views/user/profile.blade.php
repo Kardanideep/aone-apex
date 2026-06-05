@@ -26,7 +26,7 @@
                 <div>
                     <div class="relative inline-block mb-6">
                         <div class="w-28 h-28 rounded-full bg-gradient-to-br from-brand-pink to-brand-purple p-[2px]">
-                            <div class="w-full h-full rounded-full bg-[#08060F] flex items-center justify-center text-3xl text-white font-serif select-none">
+                            <div class="w-full h-full rounded-full bg-[#030009] flex items-center justify-center text-3xl text-white font-serif select-none">
                                 JD
                             </div>
                         </div>

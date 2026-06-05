@@ -53,7 +53,7 @@
     </div>
 
     {{-- RIGHT PANEL — Login Form --}}
-    <div class="w-full lg:w-1/2 flex items-center justify-center px-8 py-20 lg:px-16 bg-[#08060F]">
+    <div class="w-full lg:w-1/2 flex items-center justify-center px-8 py-20 lg:px-16 bg-[#030009]">
         <div class="w-full max-w-md">
 
             {{-- Mobile logo --}}
@@ -103,7 +103,7 @@
                 {{-- Submit --}}
                 <div class="pt-4">
                     <button type="submit"
-                        class="w-full flex items-center justify-between bg-white text-[#08060F] font-medium py-4 px-7 rounded-xl group hover:bg-brand-pink hover:text-white transition-all duration-300">
+                        class="w-full flex items-center justify-between bg-white text-[#030009] font-medium py-4 px-7 rounded-xl group hover:bg-brand-pink hover:text-white transition-all duration-300">
                         <span class="text-sm uppercase tracking-widest">Sign In</span>
                         <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>

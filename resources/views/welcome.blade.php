@@ -290,7 +290,7 @@
                                 Become a part of the AONE APEX ALLIANCE ecosystem and start your journey.
                             </p>
                         </div>
-                        <div class="absolute left-0 md:left-1/2 w-12 h-12 rounded-full bg-[#08060F] border border-brand-pink flex items-center justify-center md:-translate-x-1/2 order-1 md:order-2 group-hover:bg-brand-pink transition-all duration-500">
+                        <div class="absolute left-0 md:left-1/2 w-12 h-12 rounded-full bg-[#030009] border border-brand-pink flex items-center justify-center md:-translate-x-1/2 order-1 md:order-2 group-hover:bg-brand-pink transition-all duration-500">
                             <span class="text-sm font-serif text-brand-pink group-hover:text-white transition-colors">1</span>
                         </div>
                         <div class="md:w-5/12 order-3 hidden md:block"></div>
@@ -299,7 +299,7 @@
                     <!-- Step 2 -->
                     <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between group pl-16 md:pl-0">
                         <div class="md:w-5/12 hidden md:block order-1"></div>
-                        <div class="absolute left-0 md:left-1/2 w-12 h-12 rounded-full bg-[#08060F] border border-brand-purple flex items-center justify-center md:-translate-x-1/2 order-1 md:order-2 group-hover:bg-brand-purple transition-all duration-500">
+                        <div class="absolute left-0 md:left-1/2 w-12 h-12 rounded-full bg-[#030009] border border-brand-purple flex items-center justify-center md:-translate-x-1/2 order-1 md:order-2 group-hover:bg-brand-purple transition-all duration-500">
                             <span class="text-sm font-serif text-brand-purple group-hover:text-white transition-colors">2</span>
                         </div>
                         <div class="md:w-5/12 text-left md:pl-12 order-2 md:order-3 mt-2 md:mt-0">
@@ -318,7 +318,7 @@
                                 Build relationships, collaborate with others, and grow together.
                             </p>
                         </div>
-                        <div class="absolute left-0 md:left-1/2 w-12 h-12 rounded-full bg-[#08060F] border border-brand-pink flex items-center justify-center md:-translate-x-1/2 order-1 md:order-2 group-hover:bg-brand-pink transition-all duration-500">
+                        <div class="absolute left-0 md:left-1/2 w-12 h-12 rounded-full bg-[#030009] border border-brand-pink flex items-center justify-center md:-translate-x-1/2 order-1 md:order-2 group-hover:bg-brand-pink transition-all duration-500">
                             <span class="text-sm font-serif text-brand-pink group-hover:text-white transition-colors">3</span>
                         </div>
                         <div class="md:w-5/12 order-3 hidden md:block"></div>
@@ -327,7 +327,7 @@
                     <!-- Step 4 -->
                     <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between group pl-16 md:pl-0">
                         <div class="md:w-5/12 hidden md:block order-1"></div>
-                        <div class="absolute left-0 md:left-1/2 w-12 h-12 rounded-full bg-[#08060F] border border-brand-purple flex items-center justify-center md:-translate-x-1/2 order-1 md:order-2 group-hover:bg-brand-purple transition-all duration-500">
+                        <div class="absolute left-0 md:left-1/2 w-12 h-12 rounded-full bg-[#030009] border border-brand-purple flex items-center justify-center md:-translate-x-1/2 order-1 md:order-2 group-hover:bg-brand-purple transition-all duration-500">
                             <span class="text-sm font-serif text-brand-purple group-hover:text-white transition-colors">4</span>
                         </div>
                         <div class="md:w-5/12 text-left md:pl-12 order-2 md:order-3 mt-2 md:mt-0">
@@ -392,7 +392,7 @@
                             <label for="message" class="block text-xs font-medium text-gray-500 uppercase tracking-widest mb-2">Message</label>
                             <textarea id="message" rows="4" class="w-full bg-transparent border-b border-white/20 focus:border-brand-pink py-3 text-white placeholder-gray-700 outline-none transition-colors resize-none" placeholder="Tell us about your goals..."></textarea>
                         </div>
-                        <button type="button" class="group relative px-8 py-4 bg-white text-[#08060F] rounded-full overflow-hidden w-full transition-transform hover:scale-[1.02]">
+                        <button type="button" class="group relative px-8 py-4 bg-white text-[#030009] rounded-full overflow-hidden w-full transition-transform hover:scale-[1.02]">
                             <div class="absolute inset-0 w-0 bg-gradient-to-r from-brand-pink to-brand-purple transition-all duration-[400ms] ease-out group-hover:w-full"></div>
                             <span class="relative group-hover:text-white font-medium text-sm tracking-widest uppercase transition-colors">Send Message</span>
                         </button>

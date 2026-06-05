@@ -18,7 +18,7 @@
                     },
                     colors: {
                         brand: {
-                            dark: '#08060F',
+                            dark: '#030009',
                             purple: '#6B46C1',
                             pink: '#D53F8C',
                             gold: '#D4AF37',
@@ -29,14 +29,14 @@
         }
     </script>
     <style>
-        body { background-color: #08060F; color: #FAF9F6; overflow-x: hidden; }
+        body { background-color: #030009; color: #FAF9F6; overflow-x: hidden; }
         .text-gradient { background: linear-gradient(to right, #D53F8C, #6B46C1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .text-gradient-gold { background: linear-gradient(to right, #FDE047, #D4AF37); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         input:-webkit-autofill,
         input:-webkit-autofill:hover,
         input:-webkit-autofill:focus {
             -webkit-text-fill-color: #FAF9F6;
-            -webkit-box-shadow: 0 0 0px 1000px #08060F inset;
+            -webkit-box-shadow: 0 0 0px 1000px #030009 inset;
             transition: background-color 5000s ease-in-out 0s;
         }
     </style>

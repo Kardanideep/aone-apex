@@ -185,14 +185,14 @@
                                 Become a part of the AONE APEX ALLIANCE ecosystem and start your journey.
                             </p>
                         </div>
-                        <div class="absolute left-0 md:left-1/2 w-12 h-12 rounded-full bg-[#08060F] border border-brand-pink flex items-center justify-center md:-translate-x-1/2 order-1 md:order-2 group-hover:bg-brand-pink transition-all duration-500">
+                        <div class="absolute left-0 md:left-1/2 w-12 h-12 rounded-full bg-[#030009] border border-brand-pink flex items-center justify-center md:-translate-x-1/2 order-1 md:order-2 group-hover:bg-brand-pink transition-all duration-500">
                             <span class="text-sm font-serif text-brand-pink group-hover:text-white transition-colors">1</span>
                         </div>
                         <div class="md:w-5/12 order-3 hidden md:block"></div>
                     </div>
                     <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between group pl-16 md:pl-0">
                         <div class="md:w-5/12 hidden md:block order-1"></div>
-                        <div class="absolute left-0 md:left-1/2 w-12 h-12 rounded-full bg-[#08060F] border border-brand-purple flex items-center justify-center md:-translate-x-1/2 order-1 md:order-2 group-hover:bg-brand-purple transition-all duration-500">
+                        <div class="absolute left-0 md:left-1/2 w-12 h-12 rounded-full bg-[#030009] border border-brand-purple flex items-center justify-center md:-translate-x-1/2 order-1 md:order-2 group-hover:bg-brand-purple transition-all duration-500">
                             <span class="text-sm font-serif text-brand-purple group-hover:text-white transition-colors">2</span>
                         </div>
                         <div class="md:w-5/12 text-left md:pl-12 order-2 md:order-3 mt-2 md:mt-0">
@@ -209,14 +209,14 @@
                                 Build relationships, collaborate with others, and grow together.
                             </p>
                         </div>
-                        <div class="absolute left-0 md:left-1/2 w-12 h-12 rounded-full bg-[#08060F] border border-brand-pink flex items-center justify-center md:-translate-x-1/2 order-1 md:order-2 group-hover:bg-brand-pink transition-all duration-500">
+                        <div class="absolute left-0 md:left-1/2 w-12 h-12 rounded-full bg-[#030009] border border-brand-pink flex items-center justify-center md:-translate-x-1/2 order-1 md:order-2 group-hover:bg-brand-pink transition-all duration-500">
                             <span class="text-sm font-serif text-brand-pink group-hover:text-white transition-colors">3</span>
                         </div>
                         <div class="md:w-5/12 order-3 hidden md:block"></div>
                     </div>
                     <div class="relative flex flex-col md:flex-row items-start md:items-center justify-between group pl-16 md:pl-0">
                         <div class="md:w-5/12 hidden md:block order-1"></div>
-                        <div class="absolute left-0 md:left-1/2 w-12 h-12 rounded-full bg-[#08060F] border border-brand-purple flex items-center justify-center md:-translate-x-1/2 order-1 md:order-2 group-hover:bg-brand-purple transition-all duration-500">
+                        <div class="absolute left-0 md:left-1/2 w-12 h-12 rounded-full bg-[#030009] border border-brand-purple flex items-center justify-center md:-translate-x-1/2 order-1 md:order-2 group-hover:bg-brand-purple transition-all duration-500">
                             <span class="text-sm font-serif text-brand-purple group-hover:text-white transition-colors">4</span>
                         </div>
                         <div class="md:w-5/12 text-left md:pl-12 order-2 md:order-3 mt-2 md:mt-0">
