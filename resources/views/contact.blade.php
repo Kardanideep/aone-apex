@@ -68,51 +68,7 @@
 
             <!-- Contact Form -->
             <div>
-                <div class="bg-white/[0.02] border border-white/10 p-8 md:p-12 rounded-3xl backdrop-blur-md relative overflow-hidden shadow-2xl">
-                    <form action="#" method="POST" class="space-y-6 relative z-10">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <!-- First Name -->
-                            <div>
-                                <label for="first_name" class="block text-sm font-medium text-gray-300 mb-2">First Name</label>
-                                <input type="text" id="first_name" name="first_name" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all" required>
-                            </div>
-
-                            <!-- Last Name -->
-                            <div>
-                                <label for="last_name" class="block text-sm font-medium text-gray-300 mb-2">Last Name</label>
-                                <input type="text" id="last_name" name="last_name" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all" required>
-                            </div>
-                        </div>
-
-                        <!-- Email -->
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                            <input type="email" id="email" name="email" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all" required>
-                        </div>
-
-                        <!-- Subject -->
-                        <div>
-                            <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">Subject / Inquiry Type</label>
-                            <select id="subject" name="subject" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all appearance-none">
-                                <option value="general">General Inquiry</option>
-                                <option value="support">Technical Support</option>
-                                <option value="investment">Investment Plans</option>
-                                <option value="partnership">Partnership Opportunities</option>
-                            </select>
-                        </div>
-
-                        <!-- Message -->
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
-                            <textarea id="message" name="message" rows="5" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-brand-purple focus:ring-1 focus:ring-brand-purple transition-all resize-none" placeholder="How can we help you?" required></textarea>
-                        </div>
-
-                        <!-- Submit Button -->
-                        <button type="submit" class="w-full bg-gradient-to-r from-brand-pink to-brand-purple hover:from-brand-purple hover:to-brand-pink text-white font-medium py-4 px-4 rounded-xl transition-all duration-300 transform hover:-translate-y-0.5 shadow-[0_0_20px_rgba(213,63,140,0.3)] mt-2">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
+                @include('partials.contact-form')
             </div>
         </div>
     </div>

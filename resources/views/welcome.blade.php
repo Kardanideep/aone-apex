@@ -565,42 +565,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white/[0.02] border border-white/5 p-8 md:p-12 rounded-3xl">
-                    <form class="space-y-8">
-                        <div>
-                            <label for="name"
-                                class="block text-xs font-medium text-gray-500 uppercase tracking-widest mb-2">Your
-                                Name</label>
-                            <input type="text" id="name"
-                                class="w-full bg-transparent border-b border-white/20 focus:border-brand-pink py-3 text-white placeholder-gray-700 outline-none transition-colors"
-                                placeholder="John Doe">
-                        </div>
-                        <div>
-                            <label for="email"
-                                class="block text-xs font-medium text-gray-500 uppercase tracking-widest mb-2">Email
-                                Address</label>
-                            <input type="email" id="email"
-                                class="w-full bg-transparent border-b border-white/20 focus:border-brand-pink py-3 text-white placeholder-gray-700 outline-none transition-colors"
-                                placeholder="john@example.com">
-                        </div>
-                        <div>
-                            <label for="message"
-                                class="block text-xs font-medium text-gray-500 uppercase tracking-widest mb-2">Message</label>
-                            <textarea id="message" rows="4"
-                                class="w-full bg-transparent border-b border-white/20 focus:border-brand-pink py-3 text-white placeholder-gray-700 outline-none transition-colors resize-none"
-                                placeholder="Tell us about your goals..."></textarea>
-                        </div>
-                        <button type="button"
-                            class="group relative px-8 py-4 bg-white text-[#030009] rounded-full overflow-hidden w-full transition-transform hover:scale-[1.02]">
-                            <div
-                                class="absolute inset-0 w-0 bg-gradient-to-r from-brand-pink to-brand-purple transition-all duration-[400ms] ease-out group-hover:w-full">
-                            </div>
-                            <span
-                                class="relative group-hover:text-white font-medium text-sm tracking-widest uppercase transition-colors">Send
-                                Message</span>
-                        </button>
-                    </form>
-                </div>
+                @include('partials.contact-form')
             </div>
         </div>
     </section>

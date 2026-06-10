@@ -134,10 +134,21 @@
                     <a href="{{ route('contact') }}"
                         class="{{ request()->routeIs('contact') ? 'text-white border-b border-white pb-1' : 'text-gray-400 hover:text-white transition-colors' }}">Contact</a>
                     <div class="h-4 w-px bg-white/20 mx-1"></div>
-                    <a href="{{ route('login') }}" class="text-gray-400 hover:text-white transition-colors">Log in</a>
-                    <a href="{{ route('register') }}"
-                        class="bg-brand-purple hover:bg-brand-pink text-white px-6 py-2.5 rounded-full transition-all">Sign
-                        Up</a>
+                    @guest
+                        <a href="{{ route('login') }}" class="text-gray-400 hover:text-white transition-colors">Log in</a>
+                        <a href="{{ route('register') }}"
+                            class="bg-brand-purple hover:bg-brand-pink text-white px-6 py-2.5 rounded-full transition-all">Sign
+                            Up</a>
+                    @endguest
+                    @auth
+                        <a href="{{ route('profile') }}" class="text-gray-400 hover:text-white transition-colors">Profile</a>
+                        <form action="{{ route('logout') }}" method="POST" class="inline m-0 p-0">
+                            @csrf
+                            <button type="submit" class="bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 text-red-500 hover:text-red-400 px-6 py-2.5 rounded-full transition-all">
+                                Logout
+                            </button>
+                        </form>
+                    @endauth
                 </div>
 
                 <!-- Hamburger Button (Mobile) -->
@@ -214,14 +225,29 @@
 
         <!-- Bottom: Auth Buttons -->
         <div class="flex flex-col gap-4">
-            <a href="{{ route('register') }}"
-                class="w-full text-center bg-gradient-to-r from-brand-pink to-brand-purple text-white font-medium py-4 rounded-full text-sm uppercase tracking-widest hover:opacity-90 transition-opacity">
-                Sign Up
-            </a>
-            <a href="{{ route('login') }}"
-                class="w-full text-center border border-white/20 text-white font-medium py-4 rounded-full text-sm uppercase tracking-widest hover:border-white/60 transition-colors">
-                Log In
-            </a>
+            @guest
+                <a href="{{ route('register') }}"
+                    class="w-full text-center bg-gradient-to-r from-brand-pink to-brand-purple text-white font-medium py-4 rounded-full text-sm uppercase tracking-widest hover:opacity-90 transition-opacity">
+                    Sign Up
+                </a>
+                <a href="{{ route('login') }}"
+                    class="w-full text-center border border-white/20 text-white font-medium py-4 rounded-full text-sm uppercase tracking-widest hover:border-white/60 transition-colors">
+                    Log In
+                </a>
+            @endguest
+            @auth
+                <a href="{{ route('profile') }}"
+                    class="w-full text-center bg-brand-purple/20 border border-brand-purple/40 text-brand-purple font-medium py-4 rounded-full text-sm uppercase tracking-widest hover:bg-brand-purple/30 transition-colors">
+                    My Profile
+                </a>
+                <form action="{{ route('logout') }}" method="POST" class="w-full m-0 p-0">
+                    @csrf
+                    <button type="submit"
+                        class="w-full text-center border border-red-500/30 text-red-500 font-medium py-4 rounded-full text-sm uppercase tracking-widest hover:bg-red-500/10 transition-colors">
+                        Logout
+                    </button>
+                </form>
+            @endauth
         </div>
     </div>
 
@@ -328,6 +354,8 @@
             </div>
         </div>
     </footer>
+
+    @stack('scripts')
 </body>
 
 </html>

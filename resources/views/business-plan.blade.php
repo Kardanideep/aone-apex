@@ -4,6 +4,17 @@
 
 @section('content')
 
+@php
+    $dailyPercent = $settings['daily_investment_percent'] ?? 1;
+    $directPercent = $settings['direct_commission_percent'] ?? 5;
+    $level1 = $settings['level_1_percent'] ?? 10;
+    $level2 = $settings['level_2_percent'] ?? 7;
+    $level3 = $settings['level_3_percent'] ?? 6;
+    $level4 = $settings['level_4_percent'] ?? 3;
+    $level5 = $settings['level_5_percent'] ?? 2;
+    $packages = [20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000];
+@endphp
+
     <!-- Page Header -->
     <section class="pt-32 md:pt-48 pb-16 md:pb-20 relative overflow-hidden">
         <div
@@ -51,7 +62,7 @@
                         <h3 class="text-xl font-medium text-white">Investment Returns</h3>
                     </div>
                     <ul class="text-gray-300 font-light space-y-2">
-                        <li>Daily: 1% on investment amount</li>
+                        <li>Daily: {{ $dailyPercent }}% on investment amount</li>
                         <li>Working: 7 days per week</li>
                     </ul>
                 </div>
@@ -69,7 +80,7 @@
                         <h3 class="text-xl font-medium text-white">Direct Income Lifetime</h3>
                     </div>
                     <ul class="text-gray-300 font-light space-y-2">
-                        <li>5% direct referral commission</li>
+                        <li>{{ $directPercent }}% direct referral commission</li>
                         <li>Paid for lifetime on every direct join</li>
                     </ul>
                 </div>
@@ -82,7 +93,7 @@
                         <tr>
                             <th>SR. No.</th>
                             <th class="text-brand-pink">Joining Amount ($)</th>
-                            <th>Daily (1%)</th>
+                            <th>Daily ({{ $dailyPercent }}%)</th>
                             <th class="text-brand-purple">7-Day Return</th>
                             <th>Monthly Return</th>
                             <th>Yearly Return</th>
@@ -90,86 +101,22 @@
                     </thead>
 
                     <tbody>
+                        @foreach($packages as $index => $amount)
+                        @php
+                            $daily = $amount * ($dailyPercent / 100);
+                            $weekly = $daily * 7;
+                            $monthly = $daily * 30;
+                            $yearly = $daily * 365;
+                        @endphp
                         <tr>
-                            <td>1</td>
-                            <td class="font-medium text-white">$20</td>
-                            <td>$0.20</td>
-                            <td class="text-white">$1.40</td>
-                            <td>$6.00</td>
-                            <td>$73.00</td>
+                            <td>{{ $index + 1 }}</td>
+                            <td class="font-medium text-white">${{ number_format($amount, 0) }}</td>
+                            <td>${{ number_format($daily, 2) }}</td>
+                            <td class="text-white">${{ number_format($weekly, 2) }}</td>
+                            <td>${{ number_format($monthly, 2) }}</td>
+                            <td>${{ number_format($yearly, 2) }}</td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td class="font-medium text-white">$50</td>
-                            <td>$0.50</td>
-                            <td class="text-white">$3.50</td>
-                            <td>$15.00</td>
-                            <td>$182.50</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td class="font-medium text-white">$100</td>
-                            <td>$1.00</td>
-                            <td class="text-white">$7.00</td>
-                            <td>$30.00</td>
-                            <td>$365.00</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td class="font-medium text-white">$200</td>
-                            <td>$2.00</td>
-                            <td class="text-white">$14.00</td>
-                            <td>$60.00</td>
-                            <td>$730.00</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td class="font-medium text-white">$500</td>
-                            <td>$5.00</td>
-                            <td class="text-white">$35.00</td>
-                            <td>$150.00</td>
-                            <td>$1,825.00</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td class="font-medium text-white">$1,000</td>
-                            <td>$10.00</td>
-                            <td class="text-white">$70.00</td>
-                            <td>$300.00</td>
-                            <td>$3,650.00</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td class="font-medium text-white">$2,000</td>
-                            <td>$20.00</td>
-                            <td class="text-white">$140.00</td>
-                            <td>$600.00</td>
-                            <td>$7,300.00</td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td class="font-medium text-white">$5,000</td>
-                            <td>$50.00</td>
-                            <td class="text-white">$350.00</td>
-                            <td>$1,500.00</td>
-                            <td>$18,250.00</td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td class="font-medium text-white">$10,000</td>
-                            <td>$100.00</td>
-                            <td class="text-white">$700.00</td>
-                            <td>$3,000.00</td>
-                            <td>$36,500.00</td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td class="font-medium text-white">$20,000</td>
-                            <td>$200.00</td>
-                            <td class="text-white">$1,400.00</td>
-                            <td>$6,000.00</td>
-                            <td>$73,000.00</td>
-                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
@@ -203,27 +150,27 @@
                     <tbody>
                         <tr>
                             <td class="text-white">Level 1</td>
-                            <td class="font-medium text-brand-gold text-lg">10%</td>
+                            <td class="font-medium text-brand-gold text-lg">{{ $level1 }}%</td>
                             <td>Direct referral income</td>
                         </tr>
                         <tr>
                             <td class="text-white">Level 2</td>
-                            <td class="font-medium text-brand-gold text-lg">7%</td>
+                            <td class="font-medium text-brand-gold text-lg">{{ $level2 }}%</td>
                             <td>Second-tier network income</td>
                         </tr>
                         <tr>
                             <td class="text-white">Level 3</td>
-                            <td class="font-medium text-brand-gold text-lg">6%</td>
+                            <td class="font-medium text-brand-gold text-lg">{{ $level3 }}%</td>
                             <td>Third-tier network income</td>
                         </tr>
                         <tr>
                             <td class="text-white">Level 4</td>
-                            <td class="font-medium text-brand-gold text-lg">3%</td>
+                            <td class="font-medium text-brand-gold text-lg">{{ $level4 }}%</td>
                             <td>Fourth-tier network income</td>
                         </tr>
                         <tr>
                             <td class="text-white">Level 5</td>
-                            <td class="font-medium text-brand-gold text-lg">2%</td>
+                            <td class="font-medium text-brand-gold text-lg">{{ $level5 }}%</td>
                             <td>Passive network income</td>
                         </tr>
                     </tbody>
@@ -401,36 +348,9 @@
                         </div>
                         <h3 class="font-serif text-xl text-white">General Terms</h3>
                     </div>
-                    <ul class="space-y-4 text-gray-400 font-light text-sm relative z-10">
-                        <li class="flex items-start gap-3">
-                            <span class="text-brand-purple mt-0.5 flex-shrink-0">✦</span>
-                            <span>Reference / PIN System applies for all registrations.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-brand-purple mt-0.5 flex-shrink-0">✦</span>
-                            <span>Minimum age: 18 years to participate.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-brand-purple mt-0.5 flex-shrink-0">✦</span>
-                            <span>Valid ID proof mandatory (Aadhaar Card / Passport / DL).</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-brand-purple mt-0.5 flex-shrink-0">✦</span>
-                            <span>Only one account per person allowed (unless approved by the company).</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-brand-purple mt-0.5 flex-shrink-0">✦</span>
-                            <span>100% Guaranteed Income (Fixed) with certificate through Company.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-brand-purple mt-0.5 flex-shrink-0">✦</span>
-                            <span>No misleading advertising is allowed under any circumstances.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-brand-purple mt-0.5 flex-shrink-0">✦</span>
-                            <span>Fraudulent activity results in immediate commission cancellation.</span>
-                        </li>
-                    </ul>
+                    <div class="prose prose-invert prose-sm max-w-none relative z-10">
+                        {!! \App\Models\Setting::where('key', 'general_terms')->value('value') !!}
+                    </div>
                 </div>
 
                 <!-- RIGHT: Financial & Operational -->
@@ -448,44 +368,30 @@
                         </div>
                         <h3 class="font-serif text-xl text-white">Financial And Operational</h3>
                     </div>
-                    <ul class="space-y-4 text-gray-400 font-light text-sm relative z-10">
-                        <li class="flex items-start gap-3">
-                            <span class="text-brand-pink mt-0.5 flex-shrink-0">✦</span>
-                            <span>KYC Documents: Aadhaar Card / Passport / Driving Licence.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-brand-pink mt-0.5 flex-shrink-0">✦</span>
-                            <span>5% Admin and TAX charges deducted by Government.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-brand-pink mt-0.5 flex-shrink-0">✦</span>
-                            <span>Fixed income and profits at success levels as per plan.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-brand-pink mt-0.5 flex-shrink-0">✦</span>
-                            <span>Worldwide Tour offer as per Company announcement.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-brand-pink mt-0.5 flex-shrink-0">✦</span>
-                            <span>Generation Plan withdrawal: Monday to Monday weekly.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-brand-pink mt-0.5 flex-shrink-0">✦</span>
-                            <span>Driving Licence and Aadhaar Card valid in India only for KYC.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-brand-pink mt-0.5 flex-shrink-0">✦</span>
-                            <span>Every month one ID required to collect monthly salary — No Amount Limit.</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-brand-pink mt-0.5 flex-shrink-0">✦</span>
-                            <span>Funds transferred from the Wallet to the Compounding Fund will earn 0.4% daily compound interest, with the balance expected to approximately double within 5 months.</span>
-                        </li>
-                    </ul>
+                    <div class="prose prose-invert prose-sm max-w-none relative z-10">
+                        {!! \App\Models\Setting::where('key', 'financial_operational_terms')->value('value') !!}
+                    </div>
                 </div>
 
             </div>
         </div>
     </section>
 
+
+
+    <!-- Example Frontend Connection to API -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // This is an example of connecting the frontend with the newly created backend API
+            console.log("Attempting to fetch users from the API...");
+            fetch('/api/users')
+                .then(response => response.json())
+                .then(data => {
+                    console.log("API Connection Successful. Data:", data);
+                })
+                .catch(error => {
+                    console.error("API Connection Error:", error);
+                });
+        });
+    </script>
 @endsection

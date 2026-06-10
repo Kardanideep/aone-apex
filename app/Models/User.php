@@ -18,10 +18,55 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
+        'user_id',
+        'sponsor_id',
         'name',
         'email',
+        'mobile',
         'password',
+        'status',
+        'email_verified_at',
     ];
+
+    public function sponsor()
+    {
+        return $this->belongsTo(User::class, 'sponsor_id');
+    }
+
+    public function sponsoredUsers()
+    {
+        return $this->hasMany(User::class, 'sponsor_id');
+    }
+
+    public function children()
+    {
+        return $this->hasMany(User::class, 'sponsor_id');
+    }
+
+    public function nestedChildren()
+    {
+        return $this->children()->with('nestedChildren');
+    }
+
+    public function kyc()
+    {
+        return $this->hasOne(UserKyc::class);
+    }
+
+    public function purchases()
+    {
+        return $this->hasMany(Purchase::class);
+    }
+
+    public function wallet()
+    {
+        return $this->hasOne(UserWallet::class);
+    }
+
+    public function walletTransactions()
+    {
+        return $this->hasMany(UserWalletTransaction::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.
