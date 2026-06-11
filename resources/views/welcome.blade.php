@@ -273,6 +273,85 @@
         </div>
     </section>
 
+    <!-- Our Trusted Investors -->
+    <section id="investors" class="py-24 relative overflow-hidden bg-[#020005] border-y border-white/5">
+        <!-- Background accents -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-px bg-gradient-to-r from-transparent via-brand-purple/50 to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="text-xs font-medium tracking-widest text-gray-300 uppercase">Trusted Community</span>
+                </div>
+                <h2 class="font-serif text-4xl md:text-5xl mb-6 text-white">Our Top Investors</h2>
+                <p class="text-gray-400 font-light max-w-2xl mx-auto">Join thousands of individuals who have already begun their journey towards financial growth with us.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <!-- User Profile 1 -->
+                <div class="group flex flex-col items-center text-center p-6 rounded-3xl bg-gradient-to-b from-white/[0.04] to-transparent border border-white/5 hover:border-brand-pink/30 transition-all duration-300 hover:-translate-y-1">
+                    <div class="relative mb-5">
+                        <div class="absolute inset-0 bg-brand-pink rounded-full blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop" alt="Rajesh Sharma" class="w-20 h-20 rounded-full border-2 border-white/10 object-cover relative z-10 group-hover:border-brand-pink/50 transition-colors">
+                    </div>
+                    <h3 class="font-medium text-white mb-1">Rajesh S.</h3>
+                    <div class="text-xs text-brand-pink tracking-wider uppercase font-semibold">4 Lakhs</div>
+                </div>
+                
+                <!-- User Profile 2 -->
+                <div class="group flex flex-col items-center text-center p-6 rounded-3xl bg-gradient-to-b from-white/[0.04] to-transparent border border-white/5 hover:border-brand-purple/30 transition-all duration-300 hover:-translate-y-1">
+                    <div class="relative mb-5">
+                        <div class="absolute inset-0 bg-brand-purple rounded-full blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop" alt="Amit Patel" class="w-20 h-20 rounded-full border-2 border-white/10 object-cover relative z-10 group-hover:border-brand-purple/50 transition-colors">
+                    </div>
+                    <h3 class="font-medium text-white mb-1">Amit P.</h3>
+                    <div class="text-xs text-brand-purple tracking-wider uppercase font-semibold">2.5 Lakhs</div>
+                </div>
+
+                <!-- User Profile 3 -->
+                <div class="group flex flex-col items-center text-center p-6 rounded-3xl bg-gradient-to-b from-white/[0.04] to-transparent border border-white/5 hover:border-pink-500/30 transition-all duration-300 hover:-translate-y-1">
+                    <div class="relative mb-5">
+                        <div class="absolute inset-0 bg-pink-500 rounded-full blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop" alt="Priya Desai" class="w-20 h-20 rounded-full border-2 border-white/10 object-cover relative z-10 group-hover:border-pink-500/50 transition-colors">
+                    </div>
+                    <h3 class="font-medium text-white mb-1">Priya D.</h3>
+                    <div class="text-xs text-pink-400 tracking-wider uppercase font-semibold">5 Lakhs</div>
+                </div>
+
+                <!-- User Profile 4 -->
+                <div class="group flex flex-col items-center text-center p-6 rounded-3xl bg-gradient-to-b from-white/[0.04] to-transparent border border-white/5 hover:border-indigo-500/30 transition-all duration-300 hover:-translate-y-1">
+                    <div class="relative mb-5">
+                        <div class="absolute inset-0 bg-indigo-500 rounded-full blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop" alt="Vikram Singh" class="w-20 h-20 rounded-full border-2 border-white/10 object-cover relative z-10 group-hover:border-indigo-500/50 transition-colors">
+                    </div>
+                    <h3 class="font-medium text-white mb-1">Vikram S.</h3>
+                    <div class="text-xs text-indigo-400 tracking-wider uppercase font-semibold">3 Lakhs</div>
+                </div>
+
+                <!-- User Profile 5 -->
+                <div class="group flex flex-col items-center text-center p-6 rounded-3xl bg-gradient-to-b from-white/[0.04] to-transparent border border-white/5 hover:border-rose-500/30 transition-all duration-300 hover:-translate-y-1">
+                    <div class="relative mb-5">
+                        <div class="absolute inset-0 bg-rose-500 rounded-full blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop" alt="Neha Gupta" class="w-20 h-20 rounded-full border-2 border-white/10 object-cover relative z-10 group-hover:border-rose-500/50 transition-colors">
+                    </div>
+                    <h3 class="font-medium text-white mb-1">Neha G.</h3>
+                    <div class="text-xs text-rose-400 tracking-wider uppercase font-semibold">1.5 Lakhs</div>
+                </div>
+
+                <!-- User Profile 6 -->
+                <div class="group flex flex-col items-center text-center p-6 rounded-3xl bg-gradient-to-b from-white/[0.04] to-transparent border border-white/5 hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-1">
+                    <div class="relative mb-5">
+                        <div class="absolute inset-0 bg-purple-500 rounded-full blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop" alt="Sanjay Kumar" class="w-20 h-20 rounded-full border-2 border-white/10 object-cover relative z-10 group-hover:border-purple-500/50 transition-colors">
+                    </div>
+                    <h3 class="font-medium text-white mb-1">Sanjay K.</h3>
+                    <div class="text-xs text-purple-400 tracking-wider uppercase font-semibold">6 Lakhs</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Why Choose Us (Editorial Grid) -->
     <section id="why-us" class="py-32 bg-white/[0.02]">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">

@@ -108,13 +108,16 @@
     @yield('head')
 </head>
 
-<body class="antialiased font-sans flex h-screen overflow-hidden">
+<body class="antialiased font-sans flex h-screen overflow-hidden bg-slate-50">
+
+    <!-- OVERLAY -->
+    <div id="sidebar-overlay" class="fixed inset-0 bg-slate-900/50 z-20 hidden md:hidden transition-opacity opacity-0" onclick="toggleSidebar()"></div>
 
     <!-- SIDEBAR -->
-    <aside class="admin-sidebar w-64 h-full flex flex-col flex-shrink-0 z-20">
+    <aside id="sidebar" class="admin-sidebar w-64 h-full flex flex-col flex-shrink-0 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-300 ease-in-out z-30 bg-white">
 
         <!-- Logo -->
-        <div class="h-16 flex items-center px-6 border-b border-slate-100">
+        <div class="h-16 flex items-center justify-between px-6 border-b border-slate-100">
             <a href="{{ route('admin.dashboard') }}" class="flex items-center gap-2.5">
                 <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-600 to-pink-500 flex items-center justify-center shadow-sm">
                     <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
@@ -124,6 +127,9 @@
                     <span class="block text-[9px] uppercase tracking-[0.15em] text-violet-500 font-sans font-semibold leading-none mt-0.5">Admin Panel</span>
                 </div>
             </a>
+            <button class="md:hidden text-slate-400 hover:text-slate-600 focus:outline-none" onclick="toggleSidebar()">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
         </div>
 
         <!-- Navigation -->
@@ -232,18 +238,48 @@
     </aside>
 
     <!-- MAIN CONTENT -->
-    <div class="flex-1 flex flex-col h-full overflow-hidden">
+    <div class="flex-1 flex flex-col h-full overflow-hidden w-full relative">
 
-        <!-- TOP HEADER -->
-       
+        <!-- MOBILE HEADER -->
+        <div class="md:hidden flex items-center justify-between bg-white border-b border-slate-100 px-4 h-16 flex-shrink-0 z-10 w-full">
+            <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-600 to-pink-500 flex items-center justify-center shadow-sm">
+                    <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <div>
+                    <span class="font-serif font-bold text-slate-800 text-base leading-none">AONE</span>
+                </div>
+            </div>
+            <button onclick="toggleSidebar()" class="text-slate-500 hover:text-slate-800 focus:outline-none p-2 rounded-md hover:bg-slate-50">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
 
         <!-- PAGE CONTENT -->
-        <main class="flex-1 overflow-y-auto p-8 relative">
+        <main class="flex-1 overflow-y-auto p-4 md:p-8 relative">
             @yield('content')
         </main>
 
     </div>
 
     @stack('scripts')
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+            
+            if (sidebar.classList.contains('-translate-x-full')) {
+                // Open sidebar
+                sidebar.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+                setTimeout(() => overlay.classList.remove('opacity-0'), 10); // Fade in
+            } else {
+                // Close sidebar
+                sidebar.classList.add('-translate-x-full');
+                overlay.classList.add('opacity-0');
+                setTimeout(() => overlay.classList.add('hidden'), 300); // Wait for fade out
+            }
+        }
+    </script>
 </body>
 </html>
