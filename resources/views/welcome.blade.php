@@ -41,7 +41,7 @@
             <div class="hidden sm:block lg:col-span-5 relative mt-10 lg:mt-0">
                 <div
                     class="image-mask-organic w-full aspect-[4/5] relative bg-white/5 border border-white/10 p-2 shadow-2xl">
-                    <img src="{{asset('storage/images/home.avif')}}"
+                    <img src="{{asset('images/home.avif')}}"
                         alt="Team Collaboration"
                         class="w-full h-full object-cover rounded-[inherit] grayscale-[20%] hover:grayscale-0 transition-all duration-700">
                 </div>
@@ -133,7 +133,7 @@
                 <!-- 1 -->
                 <div class="bg-[#000000] border border-white/5 rounded-2xl overflow-hidden hover:border-brand-pink/50 transition-colors group flex flex-col">
                     <div class="h-48 w-full relative overflow-hidden bg-white/5">
-                        <img src="{{ asset('storage/images/b1.avif') }}" alt="Herbal Raw" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="{{ asset('images/b1.avif') }}" alt="Herbal Raw" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6">
                         <strong class="block text-white font-medium mb-2 text-xl">Herbal Raw Ingredients</strong>
@@ -143,7 +143,7 @@
                 <!-- 2 -->
                 <div class="bg-[#000000] border border-white/5 rounded-2xl overflow-hidden hover:border-brand-purple/50 transition-colors group flex flex-col">
                     <div class="h-48 w-full relative overflow-hidden bg-white/5">
-                        <img src="{{ asset('storage/images/b2.png') }}" alt="Gold Silver" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="{{ asset('images/b2.png') }}" alt="Gold Silver" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6">
                         <strong class="block text-white font-medium mb-2 text-xl">Gold, Silver, Copper & Nickel</strong>
@@ -153,7 +153,7 @@
                 <!-- 3 -->
                 <div class="bg-[#000000] border border-white/5 rounded-2xl overflow-hidden hover:border-brand-pink/50 transition-colors group flex flex-col">
                     <div class="h-48 w-full relative overflow-hidden bg-white/5">
-                        <img src="{{ asset('storage/images/b3.webp') }}" alt="Coal Mines" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="{{ asset('images/b3.webp') }}" alt="Coal Mines" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6">
                         <strong class="block text-white font-medium mb-2 text-xl">Coal & Mines Management</strong>
@@ -163,7 +163,7 @@
                 <!-- 4 -->
                 <div class="bg-[#000000] border border-white/5 rounded-2xl overflow-hidden hover:border-brand-purple/50 transition-colors group flex flex-col">
                     <div class="h-48 w-full relative overflow-hidden bg-white/5">
-                        <img src="{{ asset('storage/images/b4.jpg') }}" alt="Premix Raw" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="{{ asset('images/b4.jpg') }}" alt="Premix Raw" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6">
                         <strong class="block text-white font-medium mb-2 text-xl">Premix Raw Materials (Food)</strong>
@@ -173,7 +173,7 @@
                 <!-- 5 -->
                 <div class="bg-[#000000] border border-white/5 rounded-2xl overflow-hidden hover:border-brand-pink/50 transition-colors group flex flex-col">
                     <div class="h-48 w-full relative overflow-hidden bg-white/5">
-                        <img src="{{ asset('storage/images/b5.jpg') }}" alt="Heavy Machinery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="{{ asset('images/b5.jpg') }}" alt="Heavy Machinery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6">
                         <strong class="block text-white font-medium mb-2 text-xl">Industrial Heavy Machinery</strong>
@@ -183,7 +183,7 @@
                 <!-- 6 -->
                 <div class="bg-[#000000] border border-white/5 rounded-2xl overflow-hidden hover:border-brand-purple/50 transition-colors group flex flex-col">
                     <div class="h-48 w-full relative overflow-hidden bg-white/5">
-                        <img src="{{ asset('storage/images/b6.jpeg') }}" alt="Courier Shipping" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <img src="{{ asset('images/b6.jpeg') }}" alt="Courier Shipping" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <div class="p-6">
                         <strong class="block text-white font-medium mb-2 text-xl">Worldwide Courier & Shipping</strong>
