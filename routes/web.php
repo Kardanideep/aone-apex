@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    $topInvestors = \App\Models\UserInvestment::orderBy('investment_amount', 'desc')->take(6)->get();
+    return view('welcome', compact('topInvestors'));
 })->name('home');
 
 Route::get('/about', function () {
@@ -106,6 +107,7 @@ Route::prefix('admin')->group(function () {
     Route::prefix('api')->group(function () {
         Route::post('/login', [\App\Http\Controllers\Api\AdminAuthController::class, 'login']);
         Route::apiResource('packages', \App\Http\Controllers\Admin\Api\PackageController::class);
+        Route::apiResource('user-investments', \App\Http\Controllers\Admin\Api\UserInvestmentController::class);
     });
 
     // Admin Guest Routes
@@ -131,6 +133,9 @@ Route::prefix('admin')->group(function () {
 
         // Packages Management
         Route::resource('packages', \App\Http\Controllers\Admin\PackageController::class)->names('admin.packages');
+
+        // User Investments Management
+        Route::resource('user-investments', \App\Http\Controllers\Admin\UserInvestmentController::class)->names('admin.user-investments');
 
         // Settings Management
         Route::get('/settings', [\App\Http\Controllers\Admin\SettingController::class, 'index'])->name('admin.settings.index');
