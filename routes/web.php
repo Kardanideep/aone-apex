@@ -84,10 +84,6 @@ Route::middleware('auth')->group(function () {
         return view('user.change-password');
     })->name('password.change');
 
-    // Stripe return URLs
-    Route::get('/payment/success', [\App\Http\Controllers\StripeController::class, 'success'])->name('stripe.success');
-    Route::get('/payment/cancel', [\App\Http\Controllers\StripeController::class, 'cancel'])->name('stripe.cancel');
-
     // User API endpoints
     Route::prefix('api')->group(function () {
         Route::post('/profile/update', [\App\Http\Controllers\Api\ProfileController::class, 'update']);
@@ -136,6 +132,12 @@ Route::prefix('admin')->group(function () {
 
         // User Investments Management
         Route::resource('user-investments', \App\Http\Controllers\Admin\UserInvestmentController::class)->names('admin.user-investments');
+
+        // Purchase Requests Management
+        Route::get('/purchases', [\App\Http\Controllers\Admin\PurchaseController::class, 'index'])->name('admin.purchases.index');
+        Route::get('/purchases/{purchase}', [\App\Http\Controllers\Admin\PurchaseController::class, 'show'])->name('admin.purchases.show');
+        Route::post('/purchases/{purchase}/approve', [\App\Http\Controllers\Admin\PurchaseController::class, 'approve'])->name('admin.purchases.approve');
+        Route::post('/purchases/{purchase}/reject', [\App\Http\Controllers\Admin\PurchaseController::class, 'reject'])->name('admin.purchases.reject');
 
         // Settings Management
         Route::get('/settings', [\App\Http\Controllers\Admin\SettingController::class, 'index'])->name('admin.settings.index');

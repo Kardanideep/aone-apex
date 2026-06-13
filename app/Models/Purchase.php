@@ -14,6 +14,9 @@ class Purchase extends Model
         'package_id',
         'amount',
         'stripe_session_id',
+        'transaction_id',
+        'screenshot',
+        'sponsor_id',
         'status',
     ];
 
@@ -27,6 +30,11 @@ class Purchase extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function sponsor()
+    {
+        return $this->belongsTo(User::class, 'sponsor_id');
     }
 
     public function package()

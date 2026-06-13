@@ -17,13 +17,15 @@ use Illuminate\Support\Facades\DB;
 class PurchaseController extends Controller
 {
     /**
-     * Create a Stripe Checkout Session for package purchase.
+     * Handle manual payment check-out by receiving UTR / screenshot.
      */
     public function checkout(Request $request)
     {
         $request->validate([
             'package_id' => 'required|exists:packages,id',
-            'referral_code' => 'nullable|string'
+            'referral_code' => 'nullable|string',
+            'transaction_id' => 'required|string|max:100|unique:purchases,transaction_id',
+            'screenshot' => 'required|image|mimes:jpeg,jpg,png,webp|max:5120',
         ]);
 
         $user = Auth::user();
@@ -65,40 +67,30 @@ class PurchaseController extends Controller
         }
 
         try {
-            \Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+            $screenshotPath = null;
+            if ($request->hasFile('screenshot')) {
+                $screenshotPath = $request->file('screenshot')->store('uploads/payments', 'public');
+            }
 
-            $session = \Stripe\Checkout\Session::create([
-                'payment_method_types' => ['card'],
-                'line_items' => [[
-                    'price_data' => [
-                        'currency' => 'usd',
-                        'product_data' => [
-                            'name' => 'AONE APEX - ' . ($package->name ?? 'Tier'),
-                            'description' => 'Investment Package Purchase',
-                        ],
-                        'unit_amount' => $package->amount * 100, // Amount in cents
-                    ],
-                    'quantity' => 1,
-                ]],
-                'mode' => 'payment',
-                'success_url' => route('stripe.success') . '?session_id={CHECKOUT_SESSION_ID}',
-                'cancel_url' => route('stripe.cancel'),
-                'metadata' => [
-                    'user_id' => $user->id,
-                    'package_id' => $package->id,
-                    'sponsor_id' => $sponsorId,
-                ],
+            $purchase = Purchase::create([
+                'user_id' => $user->id,
+                'package_id' => $package->id,
+                'amount' => $package->amount,
+                'transaction_id' => $request->transaction_id,
+                'screenshot' => $screenshotPath,
+                'sponsor_id' => $sponsorId,
+                'status' => 'pending',
             ]);
 
             return response()->json([
                 'success' => true,
-                'url' => $session->url
+                'message' => 'Payment proof submitted successfully! Admin will verify and activate your plan.'
             ]);
 
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
-                'message' => 'Error communicating with payment gateway.',
+                'message' => 'Error saving payment details.',
                 'error' => $e->getMessage()
             ], 500);
         }
@@ -107,8 +99,12 @@ class PurchaseController extends Controller
     /**
      * Handle package purchase and direct income distribution after payment.
      */
-    public function executePurchaseAndCommissions($user, $package, $sponsorId, $stripeSessionId)
+    public function executePurchaseAndCommissions(Purchase $purchase)
     {
+        $user = $purchase->user;
+        $package = $purchase->package;
+        $sponsorId = $purchase->sponsor_id;
+
         try {
             DB::beginTransaction();
 
@@ -123,14 +119,8 @@ class PurchaseController extends Controller
                 $sponsor = User::find($user->sponsor_id);
             }
 
-            // 1. Record the Purchase
-            $purchase = Purchase::create([
-                'user_id' => $user->id,
-                'package_id' => $package->id,
-                'amount' => $package->amount,
-                'status' => 'completed',
-                'stripe_session_id' => $stripeSessionId,
-            ]);
+            // 1. Update the Purchase status to completed
+            $purchase->update(['status' => 'completed']);
 
             // 2. System Wallet Entry (Revenue)
             SystemWalletTransaction::create([
